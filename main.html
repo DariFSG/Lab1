@@ -4,18 +4,17 @@
 		<title>Handmade products</title>
 		<meta charset="UTF-8">
 		<meta name="author" content="Daria Semena">
-		<style>
-			body {background-color: rgb(203, 229, 238);}
-		</style>
+		<link rel="stylesheet" href="style.css">
+		<script src="script.js"></script>
 	</head>
 	<body>
-		<table border="2" style="width: 200px;" frame="void">
+		<table border="2" style="width: 300px;" frame="void">
 			<tr style="background-color: white;">
 				<td><ul><font size="4" face="Times New Roman">
-    				<li><a href="type_list.html" style="color: purple;">Types of H/P</a></li>
-    				<li><a href="order.html" style="color: orange;">Orders</a></li>
-    				<li><a href="trade_points.html" style="color: green;">Trade points</a></li>
-    				<li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" style="color: brown;">External page</a></li>
+    				<li><a href="type_list.html" style="color: purple;" id="supersize">Types of H/P</a></li>
+    				<li><a href="order.html" style="color: orange;"id="supersize">Orders</a></li>
+    				<li><a href="trade_points.html" style="color: green;"id="supersize">Trade points</a></li>
+    				<li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" style="color: brown;"id="supersize">External page</a></li>
 				</font></ul></td>
 			</tr>
 		</table>
@@ -24,14 +23,21 @@
 		
 		<div style="display: flex; justify-content: center;"><a href="image1.jpg" target="_blank"><img src="image1.jpg" alt="image 1" width="200" height="200"></a></div>
 
-		<p><font size="4" face="Georgia">Here you can find Handmade Products of <a href="type_list.html#Here" style="color: #e219d1;">different types</a>. 
+		<div class="container"><p><span class="text">Here you can find Handmade Products of <a href="type_list.html#Here" class="link">different types</a>. 
 			<i>Handcrafted jewelry to unique home decor items.</i>
-		</font></p>
+		</span></p></div>
 
-		<p><font size="4" face="Tahoma">Welcome to the enchanting world of Handmade Products, where creativity knows no bounds. 
+		<p class = "special">Welcome to the enchanting world of Handmade Products, where creativity knows no bounds. 
 			Explore a diverse array of meticulously crafted treasures, from handcrafted jewelry that tells stories to unique home decor items that breathe life into your living spaces. 
 			Navigate through the pages, discover the myriad Types of H/P, place Orders for your bespoke creations, 
 			and explore the network of Trade Points where these treasures find their way to you. As you embark on this creative odyssey, let the vibrant colors and textures awaken your senses.
-		</font></p>
+		</p>
+
+		
+
+		<script>
+			document.body.style.backgroundColor = 'lightgrey';
+			setTimeout(() => document.body.style.backgroundColor = '', 30000);
+		</script>
 	</body>
 </html>

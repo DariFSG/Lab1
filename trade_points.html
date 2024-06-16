@@ -2,27 +2,83 @@
 <html>
 	<head>
 		<title>Trade points</title>
-		<meta charset="UTF-8">
-		<meta name="author" content="Daria Semena">
+		<meta charset = "UTF-8">
+		<meta name = "author" content="Daria Semena">
+		<link rel = "stylesheet" href="style.css">
+		<style>
+			.highlight {
+  				background-color: yellow;
+			}
+		</style>
 	</head>
-	<body>	
+	<div>	
 		<table border="2" style="width: 200px;" frame="void">
 			<tr>
 				<td><ul><font size="4" face="Times New Roman">
-					<li><a href="main.html" style="color: brown;" target="_blank">Main</a></li>
-					<li><a href="type_list.html" style="color: purple;" target="_blank">Types of H/P</a></li>
-					<li><a href="order.html" style="color: orange;" target="_blank">Orders</a></li>
+					<li><a href="main.html" style="color: brown;" id="supersize">Main</a></li>
+					<li><a href="type_list.html" style="color: purple;" id="supersize">Types of H/P</a></li>
+					<li><a href="order.html" style="color: orange;" id="supersize">Orders</a></li>
 				</font></ul></td>
 			</tr>
 		</table>
 
 		<h1 style="text-align: center;">Trade points</h1>
-		<p><font size="4">Here you can find trade points where you can buy some stuff.</font></p>
-		
+
+		<p>Here you can find trade points where you can buy our stuff.</p>
+
+		<div class="container">
+			<div id="menu">
+				<button data-action="viewcity">View City</button>
+				<button data-action="addtolist">Add to the List</button>
+				<button data-action="rate">Rate the Place</button>
+			</div>
+		</div>
+
+		<div class="container">
+			<ul id="list">
+				<li>Kyiv</li>
+				<li>Odesa</li>
+				<li>Lviv</li>
+				<li>Kharkiv</li>
+				<li>Dnipro</li>
+			</ul>
+		</div>
+
 		<h2 style="text-align: center;">Map</h2>
 		
 		<div style="text-align: center;"><a href="map1.jpg" target="_blank"><img src="map1.jpg" alt="Your Image" ></a></div>
 
-		<p><font color="red" size="3"><i>For more information, please contact us by phone or email.</i></font></p>
+		<div class="floating"><p><font color="red"><i>For more information, please contact us by phone or email.</i></font></p></div>
+		<p>Do not be shy while talkin to our manager. He won't bite you on purpose. Have a nice day!</p>
+
+		<script>
+			if(confirm('Do you want to see online map?'))
+				location.href = 'https://maps.app.goo.gl/72w9hPazoQdbW77NA';
+		</script>
+
+		<script>
+			document.getElementById('list').addEventListener('click', function(event) {
+  			var target = event.target;
+
+  			if (target.tagName === 'LI') {
+    				var listItems = document.querySelectorAll('#list li');
+    				listItems.forEach(function(item) {
+      					item.classList.remove('highlight');
+    				});
+    				target.classList.add('highlight');
+  				}	
+			});
+
+			document.getElementById('menu').addEventListener('click', function(event) {
+  				var target = event.target;
+  				var action = target.dataset.action;
+
+  				if (action) {
+    				console.log('Action:', action);
+  				} else {
+    			console.log('No action found');
+  				}
+			});
+		</script>
 	</body>
 </html>

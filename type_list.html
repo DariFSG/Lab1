@@ -4,25 +4,26 @@
 		<title>Typos of hm products</title>
 		<meta charset = "UTF-8">
 		<meta name = "author" content = "Daria Semena">
+		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<table border="2" style="width: 200px;" frame="void">
 			<tr>
 				<td><ul><font size="4" face="Times New Roman">
-					<li><a href="main.html" style="color: brown;">Main</a></li>
-					<li><a href="order.html" style="color: orange;">Orders</a></li>
-					<li><a href="trade_points.html" style="color: green;">Trade points</a></li>
+					<li><a href="main.html" style="color: brown;" id="supersize">Main</a></li>
+					<li><a href="order.html" style="color: orange;" id="supersize">Orders</a></li>
+					<li><a href="trade_points.html" style="color: green;" id="supersize">Trade points</a></li>
 				</font></ul></td>
 			</tr>
 		</table>
 
 		<h1 style="text-align: center;">Types of Handmade Products</h1>
 		<a name="Here"></a>
-		<p><font size = "4"><b>Here you can find handmade products of different types.</b></font></p>
+		<p id="elementby">Here you can find handmade products of different types.</p>
 
-		<table border="1" style="margin: 0 auto; text-align: center; width: 1000px;">
+		<table style="margin: 0 auto; text-align: center; ">
 			<tr>
-				<th colspan="4" style="background-color: gray;">Types of material</th>
+				<th colspan="4" style="background-color: #b9b9b9;">Types of material</th>
 			</tr>
 			<tr>
 				<td><a href="im1.jpg" target="_blank"><img src="im1.jpg" alt="Image 1" width="250" height="190"></a></td>
@@ -44,9 +45,9 @@
 			</tr>
 		</table>
 		
-		<table border="1" style="margin: 0 auto; margin-top: 50px; text-align: center;  width: 1000px;">
+		<table style="margin: 0 auto; margin-top: 50px; text-align: center; ">
 			<tr>
-				<th colspan="4" style="background-color: gray;">Types of product</th>
+				<th colspan="4" style="background-color: #b9b9b9;">Types of product</th>
 			</tr>
 			<tr>
 				<td><a href="im5.jpg" target="_blank"><img src="im5.jpg" alt="Image 5" width="250" height="190"></a></td>
@@ -67,5 +68,31 @@
 				<td align="left">Delightful toys made by hand for both kids and adults.</td>
 			</tr>
 		</table>
+
+		<script>
+        	let elem = document.getElementById('elementby');
+        	elem.innerText = "Here you could have found handmade products but now you can't)";
+
+			function createlems() {
+      			let paragraph1 = document.createElement('p');
+      			let paragraph2 = document.createElement('p');
+      
+      			let text1 = document.createTextNode('Probably, it is a good idea to add some content here.');
+      			let text2 = document.createTextNode('P.s. Click on the images or links below to explore each type in detail.');
+      
+      			paragraph1.append(text1);
+      			paragraph2.prepend(text2);
+      
+      			document.write('New contet will be available soon. Stay tuned!');
+      			document.body.prepend(paragraph1);
+      			document.body.append(paragraph2);
+
+				paragraph1.after(paragraph2);
+
+				paragraph1.remove();
+			}
+    		//window.onload = createlems;
+			createlems();
+    	</script>
 	</body>
 </html>
