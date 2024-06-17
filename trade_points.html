@@ -5,13 +5,14 @@
 		<meta charset = "UTF-8">
 		<meta name = "author" content="Daria Semena">
 		<link rel = "stylesheet" href="style.css">
+		<!-- для скрипта -->
 		<style>
 			.highlight {
   				background-color: yellow;
 			}
 		</style>
 	</head>
-	<div>	
+	<div>
 		<table border="2" style="width: 200px;" frame="void">
 			<tr>
 				<td><ul><font size="4" face="Times New Roman">
@@ -25,9 +26,10 @@
 		<h1 style="text-align: center;">Trade points</h1>
 
 		<p>Here you can find trade points where you can buy our stuff.</p>
-
+		<!--кнопки та список-->
 		<div class="container">
 			<div id="menu">
+				<!-- атрибут для усіх кнопок -->
 				<button data-action="viewcity">View City</button>
 				<button data-action="addtolist">Add to the List</button>
 				<button data-action="rate">Rate the Place</button>
@@ -45,21 +47,23 @@
 		</div>
 
 		<h2 style="text-align: center;">Map</h2>
-		
+		<!-- нова сторінка + альтернативний текст, якщо неможливо завантажити-->
 		<div style="text-align: center;"><a href="map1.jpg" target="_blank"><img src="map1.jpg" alt="Your Image" ></a></div>
-
+		<!-- плаваючий текст -->
 		<div class="floating"><p><font color="red"><i>For more information, please contact us by phone or email.</i></font></p></div>
 		<p>Do not be shy while talkin to our manager. He won't bite you on purpose. Have a nice day!</p>
-
+		<!-- пересилання на іншу сторінку -->
 		<script>
 			if(confirm('Do you want to see online map?'))
 				location.href = 'https://maps.app.goo.gl/72w9hPazoQdbW77NA';
 		</script>
 
 		<script>
+			//елемент за айді та обробник події кліку
 			document.getElementById('list').addEventListener('click', function(event) {
+			//елемент, на якому відбулася подія
   			var target = event.target;
-
+			// перевірка кліку на елементі списку
   			if (target.tagName === 'LI') {
     				var listItems = document.querySelectorAll('#list li');
     				listItems.forEach(function(item) {
@@ -68,11 +72,13 @@
     				target.classList.add('highlight');
   				}	
 			});
-
+			//елемент за айді та обробник події кліку
 			document.getElementById('menu').addEventListener('click', function(event) {
+				//елемент, на якому відбулася подія
   				var target = event.target;
+				//значення атрибуту data-action
   				var action = target.dataset.action;
-
+				//перевірка на існування атрибуту у елемента
   				if (action) {
     				console.log('Action:', action);
   				} else {

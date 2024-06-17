@@ -17,18 +17,21 @@
 				</font></ul></td>
 			</tr>
 		</table>
-
+		
 		<h1 style="text-align: center;">Orders</h1>
 		<p><font face="Georgia">Here you can find contact information and order some stuff.</font></p>
 		<p><font face="Georgia"><i>For more information, please contact us by phone or email:<br>Phone: +380(96)-123-12-23<br>Email: HandyMady@prod.com</i></font></p>
-
+		<!-- картинка мапи в лівому нижньому кутку -->
 		<iframe src="map1.jpg" width="500" height="300" frameborder="0" scrolling="auto" style="position: fixed; right: 50px; bottom: 50px;"></iframe>
-
+		<!-- форма для замовлення -->
 		<h2 style="text-align: center;">Order form</h2>
 		<div class="center_container">
 			<div class="form_container">
+				<!-- форма, дані якої будуть оброблені на сторінці -->
 				<form action="#" method="post">
+					<!-- мітка для поля вводу -->
 					<label for="name">Initials:</label>
+					<!-- поле вводу з обов'язковим заповненням -->
 					<input type="text" id="name" name="name" required>
 					
 					<label for="email">Mail:</label>
@@ -39,17 +42,18 @@
 					
 					<label for="comment">Order:</label>
 					<textarea id="comment" name="comment" rows="4"></textarea>
-					
+					<!-- кнопка для відправки форми -->
 					<button type="submit" onclick="handleFormSubmit(event)" id="submitButton">Send</button>
 				</form>
 			</div>
 		</div>
 
 		<h2 style="text-align: center;">Example of a check in an email</h2>
-
+		<!-- складна таблиця -->
 		<table border="1" cellspacing="2" cellpadding="10" style="margin: 0 auto; text-align: center;">
 			<thead>
 				<tr>
+					<!-- об'єднання трьох колонок -->
 					<th colspan="3">Customer</th>
 					<th colspan="3">Order</th>
 				</tr>
@@ -64,6 +68,7 @@
 			</thead>
 			<tbody>
 				<tr>
+					<!-- об'єднання двох строк -->
 					<td rowspan="2">Daria</td>
 					<td rowspan="2">Semena</td>
 					<td rowspan="2">123 456 789</td>
@@ -72,12 +77,11 @@
 					<td>10</td>
 				</tr>
 				<tr>
+					<!-- права межа -->
 					<td colspan="2" align="right">Total:</td>
 					<td colspan="1">10</td>
 				</tr>
 			</tbody>
 		</table>
-
-
 	</body>
 </html>

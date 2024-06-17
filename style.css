@@ -2,6 +2,7 @@ body{
     font-family: Georgia, sans-serif;
     font-size: 15px;
     color: #1f1f1f;
+    /*міжстроковий інтервал*/
     line-height: 1.5;
     background-color: #ffffff;
 }
@@ -11,7 +12,7 @@ p{
     color: #0f0f0f !important;
     margin: 20px 0;
 }
-
+/*особливі параграфи*/
 p.special{
     font-family: 'Times New Roman', serif;
     font-size: 24px;
@@ -30,18 +31,19 @@ a{
     color: #2f00ff;
     text-decoration: none;
 }
-
+/*наведення на посилання*/
 a:hover{
     color: #0003b3;
     text-decoration: underline;
 }
-
+/*айді*/
 #supersize{
     font-size: 120%;
 }
 
 table{
     width: 50%;
+    /*відступи між комірками*/
     border-collapse: collapse;
     border-spacing: 0;
     margin: 20px 0;
@@ -57,7 +59,7 @@ th{
     font-weight: bold;
     text-align: center;
 }
-
+/*список*/
 ul{
     border-top: 2px dashed black;
     border-bottom: 2px dashed black;
@@ -72,7 +74,7 @@ li + li {
 }
 
 li a {
-    color: #3a0c0c !important;
+    color: #3a0c0c !important; /*пріоритет*/
     text-decoration: none;
 }
 
@@ -108,7 +110,7 @@ form label {
     color: #292929;
     text-align: left;
 }
-
+/*текстові поля*/
 form input,
 form textarea {
     width: calc(100% - 22px);
@@ -132,7 +134,7 @@ form button {
 form button:hover {
     background-color: #a4d8a8;
 }
-
+/*плаваючий блок*/
 .floating {
     float: right;
     width: fit-content;
@@ -142,6 +144,7 @@ form button:hover {
 }
 
 .container {
+    /*позиція відносно нормального положення*/
     position: relative;
     width: fit-content;
     margin: 10px auto;
@@ -157,26 +160,25 @@ form button:hover {
 .text::after {
     content: "❤️";
 }
-
+/*не відвідані*/
 a.link:link {
     color: #ff00ea ;
 }
-
+/*відвідані*/
 a.link:visited {
     color: #37d0e7;
 }
-
+/*при наведенні*/
 a.link:hover {
     color: #e60e0e ;
     text-decoration: underline;
 }
-
+/*при утриманні*/
 a.link:active {
     color: #12ce32 ;
 }
-
+/*до першого дочірнього елементу*/
 p:first-child {
     font-weight: bold;
     background: #f7f5e8;
 }
-

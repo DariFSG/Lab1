@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     submitButton.addEventListener('click', function(event) {
         // Запобігаємо стандартній дії відправки форми
         event.preventDefault();
-
+        // Консоль
         console.log("Obrobnik podii Vlastyvist:");
         console.log("Current Target:", event.currentTarget);
 
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("Order:", order);
     });
 });
-
+//Виконання функції після завантаження сторінки
 document.addEventListener('DOMContentLoaded', function() {
     // Отримання кнопки по ідентифікатору
     var submitButton = document.getElementById('submitButton');
@@ -76,23 +76,3 @@ document.addEventListener('DOMContentLoaded', function() {
     // Обробник події через метод handleEvent
     submitButton.addEventListener('click', eventHandler);
 });
-
-document.getElementById('list').onclick = function(event) {
-    var target = event.target;
-
-    if (target.tagName === 'li') {
-        var listItems = document.querySelectorAll('#list li');
-        listItems.forEach(function(item) {
-            item.classList.remove('highlight');
-        });
-
-        target.classList.add('highlight');
-    }
-};
-
-document.getElementById('menu').onclick = function(event) {
-    var target = event.target;
-    var action = target.dataset.action;
-
-    console.log('Action:', action);
-};

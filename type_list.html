@@ -18,6 +18,7 @@
 		</table>
 
 		<h1 style="text-align: center;">Types of Handmade Products</h1>
+		<!-- якір -->
 		<a name="Here"></a>
 		<p id="elementby">Here you can find handmade products of different types.</p>
 
@@ -70,25 +71,29 @@
 		</table>
 
 		<script>
+			 //лемент з ідентифікатором з DOM
         	let elem = document.getElementById('elementby');
+			//зміна тексту елементу
         	elem.innerText = "Here you could have found handmade products but now you can't)";
 
 			function createlems() {
+				//створюю нові елементи
       			let paragraph1 = document.createElement('p');
       			let paragraph2 = document.createElement('p');
-      
+				//створюю текстові вузли
       			let text1 = document.createTextNode('Probably, it is a good idea to add some content here.');
       			let text2 = document.createTextNode('P.s. Click on the images or links below to explore each type in detail.');
-      
+				//додаю текстові вузли до елементів
       			paragraph1.append(text1);
       			paragraph2.prepend(text2);
-      
+				//змінює документ
       			document.write('New contet will be available soon. Stay tuned!');
+				//на початок та в кінець документу
       			document.body.prepend(paragraph1);
       			document.body.append(paragraph2);
-
+				//1 параграф після 2 параграфа
 				paragraph1.after(paragraph2);
-
+				//видаляє 1 параграф
 				paragraph1.remove();
 			}
     		//window.onload = createlems;
